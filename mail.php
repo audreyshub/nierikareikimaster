@@ -5,7 +5,7 @@ if(isset( $_POST['email']))
 $email = $_POST['email'];
 if(isset( $_POST['field']))
 //change message to field
-field = $_POST['field'];
+$field = $_POST['field'];
 
 
 $content="From: $name \n Email: $email \n Message: field";
