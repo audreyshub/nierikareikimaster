@@ -3,7 +3,7 @@ if(isset( $_POST['name']))
 $name = $_POST['name'];
 if(isset( $_POST['email']))
 $email = $_POST['email'];
-if(isset( $_POST['message']))
+if(isset( $_POST['field']))
 //change message to field
 field = $_POST['field'];
 
