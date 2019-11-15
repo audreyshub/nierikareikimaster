@@ -1,17 +1,26 @@
 <?php
-if(isset( $_POST['name']))
-$name = $_POST['name'];
-if(isset( $_POST['email']))
-$email = $_POST['email'];
-if(isset( $_POST['field']))
-//change message to field
-$field = $_POST['field'];
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+/*
+Tested working with PHP5.4 and above (including PHP 7 )
+
+ */
+require_once './vendor/autoload.php';
+
+use FormGuide\Handlx\FormHandler;
 
 
-//$content="From: $name \n Email: $email \n Message: $field";
-$content="From: $name";
-$recipient = "audreydotwong@gmail.com";
-$mailheader = "From: $email \r\n";
-mail($recipient, $content, $mailheader) or die("Error!");
-echo "Email sent!";
-?>
+$pp = new FormHandler();
+
+$validator = $pp->getValidator();
+$validator->fields(['name','email'])->areRequired()->maxLength(50);
+$validator->field('email')->isEmail();
+$validator->field('field')->maxLength(6000);
+
+
+
+
+$pp->sendEmailTo('audreydotwong@gmail.com'); // ← Your email here
+
+echo $pp->process($_POST);
