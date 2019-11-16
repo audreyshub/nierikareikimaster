@@ -1,4 +1,19 @@
+require 'vendor/autoload.php';
+
+
 <?php
-mail('audreydotwong@gmail.com','Test mail','The mail function is working!');
-echo 'Mail sent!';
+if(isset( $_POST['name']))
+$name = $_POST['name'];
+if(isset( $_POST['email']))
+$email = $_POST['email'];
+if(isset( $_POST['field']))
+//change message to field
+$field = $_POST['field'];
+
+
+$content="From: $name \n Email: $email \n Message: $field";
+$recipient = "audreydotwong@gmail.com";
+$mailheader = "From: $email \r\n";
+mail($recipient, $content, $mailheader) or die("Something went wrong!");
+echo "Email sent!";
 ?>
