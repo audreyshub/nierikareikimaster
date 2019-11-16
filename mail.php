@@ -13,5 +13,5 @@ $content="From: $name \n Email: $email \n Message: $field";
 $recipient = "audreydotwong@gmail.com";
 $mailheader = "From: $email \r\n";
 mail($recipient, $content, $mailheader) or die("Something went wrong!");
-echo "Email sent!";
+echo "Email sent!!";
 ?>
