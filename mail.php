@@ -1,5 +1,3 @@
-require 'vendor/autoload.php';
-
 
 <?php
 if(isset( $_POST['name']))
