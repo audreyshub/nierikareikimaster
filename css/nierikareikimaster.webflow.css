@@ -299,7 +299,11 @@ a:hover {
   font-size: 16px;
   line-height: 65px;
   text-align: right;
-  text-transform: uppercase;
+  color: #272c30;
+}
+
+.footer-paragraph a {
+    color: #272c30;
 }
 
 .column-3 {
@@ -417,16 +421,14 @@ a:hover {
   .heading {
     font-size: 20px;
   }
-  /* .nav-menu {
-    display: block;
-  } */
   .logo-text {
     font-size: 15px;
     line-height: 42px;
     text-align: center;
   }
   .footer-paragraph {
-    text-align: center;
+      font-size: 13px;
+    text-align: right;
   }
   .column-3 {
     display: none;
