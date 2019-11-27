@@ -336,6 +336,7 @@ a:hover {
 
 .text-block {
   font-size: 16px;
+  text-align: center;
 }
 
 .bold-text-3 {
@@ -426,10 +427,6 @@ a:hover {
     line-height: 42px;
     text-align: center;
   }
-  .footer-paragraph {
-      font-size: 13px;
-    text-align: right;
-  }
   .column-3 {
     display: none;
   }
@@ -440,7 +437,7 @@ a:hover {
     font-size: 11px;
   }
   .text-block {
-    font-size: 13px;
+    font-size: 14px;
   }
   .bold-text-3 {
     font-size: 13px;
