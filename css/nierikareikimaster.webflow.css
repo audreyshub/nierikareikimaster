@@ -343,6 +343,10 @@ a:hover {
   font-weight: 600;
 }
 
+.sectionimage {
+  width: 100vw;
+}
+
 @media (max-width: 991px) {
   h1 {
     width: auto;
